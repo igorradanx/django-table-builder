@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "f6fc7476-ff2c-4ff4-8c96-d762de2b5c1e",
+		"name": "Table builder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "251071"
+	},
+	"item": [
+		{
+			"name": "Create table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"table_name_11\",\n\t\"fields\": [\n\t\t{ \"name\": \"str_field_name\", \"type\": \"string\" },\n\t\t{ \"name\": \"number_field_name\", \"type\": \"number\" },\n\t\t{ \"name\": \"bool_field_name\", \"type\": \"boolean\" },\n\t\t{ \"name\": \"another_number_field\", \"type\": \"number\" }\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/table/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"table",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update table",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fields\": [\n\t\t{ \"name\": \"str_field_name\", \"type\": \"string\" },\n\t\t{ \"name\": \"number_field_name\", \"type\": \"number\" },\n\t\t{ \"name\": \"bool_field_name\", \"type\": \"boolean\" },\n\t\t{ \"name\": \"another_str_field\", \"type\": \"string\" }\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/table/table_name_11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"table",
+						"table_name_11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add table row",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/table/table_name_11/row",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"table",
+						"table_name_11",
+						"row"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get table rows",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/table/table_name_14/rows",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"table",
+						"table_name_14",
+						"rows"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
